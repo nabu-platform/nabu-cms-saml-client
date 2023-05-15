@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-11T09:22:55.206+02:00" lastModified="2023-05-11T11:02:57.031+02:00" leaf="true" version="30">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.saml.client.authnRequest</references>
+    <references>nabu.utils.Server.uuid</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.cms.saml.client.utils.encode</references>
+    <references>nabu.utils.Uri.encodeUriComponent</references>
+    <references>java.lang.String</references>
+    <references>java.util.UUID</references>
+    <references>java.net.URI</references>
+    <references>nabu.data.xml.Services.marshal</references>
+    <references>nabu.utils.Stream.toString</references>
+</node>

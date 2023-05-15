@@ -1,0 +1,15 @@
+<structure interface="nabu.cms.saml.client.rest.login:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.saml.client.authnResponse" elementQualifiedDefault="true" name="response" namespace="urn:oasis:names:tc:SAML:2.0:protocol"/>
+    <structure collectionName="samlProviderLogins" definition="nabu.cms.saml.client.crud.samlProviderLogin.types.output" name="login"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+    <structure collectionName="samlProviders" definition="nabu.cms.saml.client.crud.samlProvider.types.output" name="provider"/>
+    <field name="serializedResponse" type="java.lang.String"/>
+    <field name="valid" type="java.lang.Boolean"/>
+    <structure definition="nabu.web.application.types.WebApplicationInformation" minOccurs="0" name="information"/>
+    <structure collectionName="users" definition="nabu.cms.core.crud.user.types.output" duplicate="id, created, modified" name="user"/>
+    <field name="canProceed" type="java.lang.Boolean"/>
+    <structure definition="be.nabu.eai.module.web.application.api.TemporaryAuthentication" minOccurs="0" name="authentication"/>
+    <field minOccurs="0" name="expires" type="java.util.Date"/>
+</structure>

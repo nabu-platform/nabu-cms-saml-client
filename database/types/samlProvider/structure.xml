@@ -1,0 +1,13 @@
+<structure collectionName="samlProviders" name="samlProvider">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="name" type="java.lang.String"/>
+    <field comment="The URI where we need to redirect to to log in" minOccurs="0" name="authorizationEndpoint" type="java.net.URI"/>
+    <field comment="The application this provider is active on (if any). Some providers are used for client credential flows only and don't need user roundtripping." minOccurs="0" name="webApplicationId" type="java.lang.String"/>
+    <field comment="The issuer we use for the application" minOccurs="0" name="applicationIssuer" type="java.lang.String"/>
+    <field comment="The issuer that the provider signs with" minOccurs="0" name="providerIssuer" type="java.lang.String"/>
+    <field comment="Set the discovery endpoint here if known" minOccurs="0" name="discoveryEndpoint" type="java.net.URI"/>
+    <field comment="Once a user requests a login, how long is that particular request valid?" minOccurs="0" name="maximumLoginWait" type="be.nabu.libs.types.base.Duration"/>
+    <field minOccurs="0" name="signatureCertificate" type="java.lang.String"/>
+    <field comment="Where to redirect to if successful" minOccurs="0" name="successEndpoint" type="java.net.URI"/>
+    <field comment="Where to redirect to if we failed" minOccurs="0" name="failureEndpoint" type="java.net.URI"/>
+</structure>

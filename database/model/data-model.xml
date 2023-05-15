@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.cms.saml.client.database.types.samlProvider</type>
+        <x>234</x>
+        <y>96</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.cms.saml.client.database.types.samlProviderLogin</type>
+        <x>898</x>
+        <y>235</y>
+    </entries>
+</dataModel>

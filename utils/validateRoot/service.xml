@@ -1,0 +1,79 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="370036243ff446b5a61897b50880c078"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="7b7631c9ae404c4491b6fed936540913"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="43154368e77e4999aad4cbc4307b2747"
+				serviceId="nabu.utils.Security.parseSerializedCertificate"
+				resultName="result3dbe58a0a8774f82806c0f483d76de96"
+				temporaryMapping="true"
+				x="90"
+				y="51"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="6da64fa845014cc9aed986e773a6ccc3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/certificate</from>
+				<to>serialized</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="f525933a159f4055a1440df2e88cd7a8"
+				serviceId="nabu.utils.Security.verifyXmlSignature"
+				resultName="result3feb771380d84b36b44412ad83361803"
+				temporaryMapping="true"
+				x="416"
+				y="145"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="29ac1be503684bd59969ab6f11cdccca"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result3dbe58a0a8774f82806c0f483d76de96/certificate</from>
+				<to>certificate</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="58f62f1118694c8b9ae8aad186dd4a7f"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content</from>
+				<to>xml</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="be5702033ef34f0984f392f897eaac80"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>Signature</from>
+				<to>signaturePath</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="7325db57839f44ae8e0814f81ef442c5"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result3feb771380d84b36b44412ad83361803/signatureResult/valid</from>
+			<to>output/valid</to>
+		</steps>
+	</steps>
+</sequence>

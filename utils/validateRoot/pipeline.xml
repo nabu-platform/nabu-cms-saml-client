@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="content" type="java.lang.String"/>
+        <field name="certificate" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field name="valid" type="java.lang.Boolean"/>
+    </structure>
+</structure>

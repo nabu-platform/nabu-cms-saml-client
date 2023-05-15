@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-05-11T10:57:40.822+02:00" lastModified="2023-05-15T14:13:48.685+02:00" leaf="true" version="38">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.core.services.context.getApplication</references>
+    <references>java.util.Date</references>
+    <references>nabu.cms.core.crud.account.services.create</references>
+    <references>be.nabu.libs.authentication.api.Device</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.data.xml.Services.unmarshal</references>
+    <references>nabu.web.application.Services.information</references>
+    <references>nabu.cms.saml.client.crud.samlProviderLogin.services.get</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.core.crud.user.services.list</references>
+    <references>nabu.web.application.Services.newTemporaryAuthentication</references>
+    <references>nabu.cms.saml.client.authnResponse</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.utils.String.toStream</references>
+    <references>nabu.web.application.Services.formatCookie</references>
+    <references>nabu.cms.saml.client.crud.samlProviderLogin.types.output</references>
+    <references>nabu.cms.core.services.user.canRegisterAs</references>
+    <references>nabu.cms.saml.client.utils.validateRoot</references>
+    <references>nabu.cms.saml.client.crud.samlProvider.services.get</references>
+    <references>be.nabu.eai.module.web.application.api.TemporaryAuthentication</references>
+    <references>nabu.cms.core.crud.user.types.output</references>
+    <references>nabu.utils.Runtime.getCorrelationId</references>
+    <references>nabu.cms.saml.client.utils.decode</references>
+    <references>nabu.cms.saml.client.rest.loginInput</references>
+    <references>nabu.web.application.types.WebApplicationInformation</references>
+    <references>nabu.cms.core.services.user.canLoginAs</references>
+    <references>nabu.utils.Date.incrementDuration</references>
+    <references>nabu.cms.saml.client.crud.samlProvider.types.output</references>
+</node>

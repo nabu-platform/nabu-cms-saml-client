@@ -1,0 +1,10 @@
+https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-on-saml-protocol
+
+
+For tenant information:
+
+https://login.microsoftonline.com/<TenantDomainName>/FederationMetadata/2007-06/FederationMetadata.xml
+
+
+random information?
+https://nexus.microsoftonline-p.com/federationmetadata/saml20/federationmetadata.xml

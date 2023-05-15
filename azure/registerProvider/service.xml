@@ -1,0 +1,93 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="9288d8e431814fe991181d5fb61509da"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="5e031963de774e28a12544dfa7f760fe"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="cfc56ec640b24128b3a5499acb493748"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/name</from>
+			<to>provider/name</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="ee3a42f4d68c4ce1bbac7c47431c53f2"
+				serviceId="nabu.utils.Server.uuid"
+				resultName="resulta7b0044483d34f4998f4e43eff881df4"
+				temporaryMapping="true"
+				x="289"
+				y="182"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="d545ff7df68148cdb2745dcad4bfb7a2"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulta7b0044483d34f4998f4e43eff881df4/uuid</from>
+			<to>provider/id</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="a0248380409741a78040bd98c63cc6ce"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>="https://login.microsoftonline.com/" + input/tenantId + "/FederationMetadata/2007-06/FederationMetadata.xml"</from>
+			<to>provider/discoveryEndpoint</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="72942cc5cb074619b0b255051b4147a4"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>="https://login.microsoftonline.com/" + input/tenantId + "/saml2"</from>
+			<to>provider/authorizationEndpoint</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="dcaef5bd1c2242e4972629d4d1cd30d0"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>="https://login.microsoftonline.com/" + input/tenantId + "/"</from>
+			<to>provider/providerIssuer</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="60379a6a048d43acabe13bb8ce4d361b"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="442ed852b8cb4156a6a4db03ae2143a1"
+				serviceId="nabu.services.jdbc.Services.insert"
+				resultName="resultf6dc4ccc27b8459097c1ef3bfe5bb251"
+				temporaryMapping="true"
+				x="161"
+				y="214"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9af5915183ef41bd8e41c30a5d31a825"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>provider</from>
+				<to>instances[0]</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

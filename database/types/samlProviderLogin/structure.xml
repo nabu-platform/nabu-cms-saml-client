@@ -1,0 +1,9 @@
+<structure collectionName="samlProviderLogins" name="samlProviderLogin">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.saml.client.database.types.samlProvider:id" name="samlProviderId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The redirect uri that was crafted" minOccurs="0" name="redirectUri" type="java.net.URI"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field comment="When it was used" minOccurs="0" name="used" timezone="UTC" type="java.util.Date"/>
+    <field minOccurs="0" name="expires" timezone="UTC" type="java.util.Date"/>
+    <field aggregation="composite" comment="The user this login was for" foreignKey="nabu.cms.core.types.emodel.core.User:id" minOccurs="0" name="userId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

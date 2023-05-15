@@ -1,0 +1,18 @@
+<structure elementQualifiedDefault="true" name="AuthnRequest" namespace="urn:oasis:names:tc:SAML:2.0:protocol">
+    <field name="@AssertionConsumerServiceURL" type="java.lang.String"/>
+    <field name="@Destination" type="java.lang.String"/>
+    <field name="@ID" type="java.lang.String"/>
+    <field name="@IssueInstant" timezone="UTC" type="java.util.Date"/>
+    <field name="@ProtocolBinding" type="java.lang.String"/>
+    <field name="@ProviderName" type="java.lang.String"/>
+    <field name="@Version" type="java.lang.String"/>
+    <field name="Issuer" namespace="urn:oasis:names:tc:SAML:2.0:assertion" type="java.lang.String"/>
+    <structure minOccurs="0" name="NameIDPolicy">
+        <field minOccurs="0" name="@Format" type="java.lang.String"/>
+        <field minOccurs="0" name="@AllowCreate" type="java.lang.String"/>
+    </structure>
+    <structure minOccurs="0" name="RequestedAuthnContext" namespace="urn:oasis:names:tc:SAML:2.0:protocol">
+        <field name="@Comparison" type="java.lang.String"/>
+        <field name="AuthnContextClassRef" type="java.lang.String"/>
+    </structure>
+</structure>

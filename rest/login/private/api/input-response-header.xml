@@ -1,0 +1,4 @@
+<structure name="responseHeader">
+    <field name="location" type="java.lang.String"/>
+    <field name="setCookie" type="java.lang.String"/>
+</structure>

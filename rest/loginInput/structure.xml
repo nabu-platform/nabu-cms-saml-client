@@ -1,0 +1,4 @@
+<structure name="loginInput">
+    <field name="SAMLResponse" type="java.lang.String"/>
+    <field minOccurs="0" name="RelayState" type="java.lang.String"/>
+</structure>

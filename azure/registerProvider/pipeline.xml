@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="name" type="java.lang.String"/>
+        <field comment="Dash-based uuid normally" name="tenantId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+        <field minOccurs="0" name="webApplicationId" type="java.lang.String"/>
+        <field minOccurs="0" name="issuer" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="samlProviders" definition="nabu.cms.saml.client.database.types.samlProvider" name="provider"/>
+</structure>

@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="content" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field name="encoded" type="java.lang.String"/>
+    </structure>
+    <field name="encoded" type="[B"/>
+</structure>

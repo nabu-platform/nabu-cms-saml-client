@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-11T11:17:59.726+02:00" lastModified="2023-05-11T13:40:45.270+02:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.services.jdbc.Services.insert</references>
+    <references>nabu.utils.Server.uuid</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.saml.client.database.types.samlProvider</references>
+</node>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-11T09:05:18.867+02:00" lastModified="2023-05-11T10:18:36.658+02:00" leaf="true" version="20">
+    <comment>Deflate and base64 encode</comment>
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.Transcoder.base64Encoder</references>
+    <references>nabu.utils.Transcoder.transcode</references>
+    <references>nabu.utils.Transcoder.deflateEncoder</references>
+    <references>nabu.utils.String.toStream</references>
+    <references>nabu.utils.Transcoder.gzipEncoder</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.Stream.toString</references>
+</node>

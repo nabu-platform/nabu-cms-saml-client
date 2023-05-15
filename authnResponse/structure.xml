@@ -1,0 +1,86 @@
+<structure elementQualifiedDefault="true" name="Response" namespace="urn:oasis:names:tc:SAML:2.0:protocol">
+    <field name="@Destination" type="java.lang.String"/>
+    <field name="@ID" type="java.lang.String"/>
+    <field name="@InResponseTo" type="java.lang.String"/>
+    <field name="@IssueInstant" type="java.lang.String"/>
+    <field name="@Version" type="java.lang.String"/>
+    <field name="Issuer" type="java.lang.String"/>
+    <structure minOccurs="0" name="Signature" namespace="http://www.w3.org/2000/09/xmldsig#">
+        <structure name="SignedInfo" namespace="http://www.w3.org/2000/09/xmldsig#">
+            <field minOccurs="0" name="CanonicalizationMethod" type="java.lang.String"/>
+            <field minOccurs="0" name="SignatureMethod" type="java.lang.String"/>
+            <structure name="Reference" namespace="http://www.w3.org/2000/09/xmldsig#">
+                <field name="@URI" type="java.lang.String"/>
+                <structure name="Transforms" namespace="http://www.w3.org/2000/09/xmldsig#">
+                    <field maxOccurs="unbounded" minOccurs="0" name="Transform" type="java.lang.String"/>
+                </structure>
+                <field minOccurs="0" name="DigestMethod" type="java.lang.String"/>
+                <field name="DigestValue" type="java.lang.String"/>
+            </structure>
+        </structure>
+        <field name="SignatureValue" type="java.lang.String"/>
+        <structure name="KeyInfo" namespace="http://www.w3.org/2000/09/xmldsig#">
+            <structure name="X509Data" namespace="http://www.w3.org/2000/09/xmldsig#">
+                <field name="X509Certificate" type="java.lang.String"/>
+            </structure>
+        </structure>
+    </structure>
+    <structure minOccurs="0" name="Status" namespace="urn:oasis:names:tc:SAML:2.0:protocol">
+        <field minOccurs="0" name="StatusCode" type="java.lang.String"/>
+    </structure>
+    <structure minOccurs="0" name="Assertion" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+        <field name="@ID" type="java.lang.String"/>
+        <field name="@IssueInstant" type="java.lang.String"/>
+        <field name="@Version" type="java.lang.String"/>
+        <field name="Issuer" type="java.lang.String"/>
+        <structure minOccurs="0" name="Signature" namespace="http://www.w3.org/2000/09/xmldsig#">
+            <structure name="SignedInfo" namespace="http://www.w3.org/2000/09/xmldsig#">
+                <field minOccurs="0" name="CanonicalizationMethod" type="java.lang.String"/>
+                <field minOccurs="0" name="SignatureMethod" type="java.lang.String"/>
+                <structure name="Reference" namespace="http://www.w3.org/2000/09/xmldsig#">
+                    <field name="@URI" type="java.lang.String"/>
+                    <structure name="Transforms" namespace="http://www.w3.org/2000/09/xmldsig#">
+                        <field maxOccurs="unbounded" minOccurs="0" name="Transform" type="java.lang.String"/>
+                    </structure>
+                    <field minOccurs="0" name="DigestMethod" type="java.lang.String"/>
+                    <field name="DigestValue" type="java.lang.String"/>
+                </structure>
+            </structure>
+            <field name="SignatureValue" type="java.lang.String"/>
+            <structure name="KeyInfo" namespace="http://www.w3.org/2000/09/xmldsig#">
+                <structure name="X509Data" namespace="http://www.w3.org/2000/09/xmldsig#">
+                    <field name="X509Certificate" type="java.lang.String"/>
+                </structure>
+            </structure>
+        </structure>
+        <structure minOccurs="0" name="Subject" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+            <field name="NameID" type="java.lang.String"/>
+            <structure name="SubjectConfirmation" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+                <field name="@Method" type="java.lang.String"/>
+                <field minOccurs="0" name="SubjectConfirmationData" type="java.lang.String"/>
+            </structure>
+        </structure>
+        <structure minOccurs="0" name="Conditions" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+            <field name="@NotBefore" type="java.lang.String"/>
+            <field name="@NotOnOrAfter" type="java.lang.String"/>
+            <structure name="AudienceRestriction" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+                <field name="Audience" type="java.lang.String"/>
+            </structure>
+        </structure>
+        <structure minOccurs="0" name="AuthnStatement" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+            <field name="@AuthnInstant" type="java.lang.String"/>
+            <field name="@SessionIndex" type="java.lang.String"/>
+            <field name="@SessionNotOnOrAfter" type="java.lang.String"/>
+            <structure name="AuthnContext" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+                <field name="AuthnContextClassRef" type="java.lang.String"/>
+            </structure>
+        </structure>
+        <structure minOccurs="0" name="AttributeStatement" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+            <structure maxOccurs="unbounded" name="Attribute" namespace="urn:oasis:names:tc:SAML:2.0:assertion">
+                <field name="@Name" type="java.lang.String"/>
+                <field name="@NameFormat" type="java.lang.String"/>
+                <field maxOccurs="unbounded" name="AttributeValue" type="java.lang.String"/>
+            </structure>
+        </structure>
+    </structure>
+</structure>

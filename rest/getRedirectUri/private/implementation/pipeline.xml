@@ -1,0 +1,11 @@
+<structure interface="nabu.cms.saml.client.rest.getRedirectUri:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="samlProviders" definition="nabu.cms.saml.client.crud.samlProvider.types.output" minOccurs="0" name="provider"/>
+    <field name="redirectUri" type="java.lang.String"/>
+    <structure definition="nabu.cms.saml.client.authnRequest" elementQualifiedDefault="true" name="request" namespace="urn:oasis:names:tc:SAML:2.0:protocol"/>
+    <structure collectionName="samlProviderLogins" definition="nabu.cms.saml.client.database.types.samlProviderLogin" name="login"/>
+    <field minOccurs="0" name="marshalled" type="java.lang.String"/>
+    <field name="encoded" type="java.lang.String"/>
+    <structure definition="nabu.web.application.types.WebApplicationInformation" minOccurs="0" name="information"/>
+</structure>
