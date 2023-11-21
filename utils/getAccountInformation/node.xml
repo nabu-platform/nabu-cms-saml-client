@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-06-06T09:29:34.242+02:00" lastModified="2023-06-06T09:37:26.478+02:00" leaf="true" version="7">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.saml.client.authnResponse</references>
+    <references>nabu.cms.core.types.types.person</references>
+    <references>java.lang.String</references>
+</node>

@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.cms.saml.client.authnResponse" elementQualifiedDefault="true" name="response" namespace="urn:oasis:names:tc:SAML:2.0:protocol"/>
+    </structure>
+    <structure name="output">
+        <structure definition="nabu.cms.core.types.types.person" name="person"/>
+        <field minOccurs="0" name="objectId" type="java.lang.String"/>
+    </structure>
+</structure>

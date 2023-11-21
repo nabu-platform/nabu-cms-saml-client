@@ -12,4 +12,6 @@
     <field name="canProceed" type="java.lang.Boolean"/>
     <structure definition="be.nabu.eai.module.web.application.api.TemporaryAuthentication" minOccurs="0" name="authentication"/>
     <field minOccurs="0" name="expires" type="java.util.Date"/>
+    <structure definition="nabu.cms.core.types.types.person" name="person"/>
+    <field minOccurs="0" name="objectId" type="java.lang.String"/>
 </structure>

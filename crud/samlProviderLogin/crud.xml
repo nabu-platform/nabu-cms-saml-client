@@ -22,7 +22,9 @@
         <input>true</input>
         <vary>false</vary>
     </filters>
+    <getPermission>saml.list</getPermission>
     <hooks>false</hooks>
+    <listPermission>saml.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <restLimitToUser>true</restLimitToUser>

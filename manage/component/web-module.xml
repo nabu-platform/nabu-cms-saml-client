@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/saml</path>
+    <webFragments>nabu.cms.saml.client.crud.samlProvider</webFragments>
+    <webFragments>nabu.cms.saml.client.crud.samlProviderLogin</webFragments>
+    <audience>MANAGER</audience>
+</webModule>

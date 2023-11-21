@@ -4,7 +4,9 @@
     <broadcastCreate>false</broadcastCreate>
     <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.cms.saml.client.database.types.samlProvider</coreType>
+    <createPermission>saml.manage</createPermission>
     <createRole>$user</createRole>
+    <deletePermission>saml.manage</deletePermission>
     <deleteRole>$user</deleteRole>
     <filters>
         <caseInsensitive>false</caseInsensitive>
@@ -22,10 +24,13 @@
         <input>true</input>
         <vary>false</vary>
     </filters>
+    <getPermission>saml.list</getPermission>
     <hooks>false</hooks>
+    <listPermission>saml.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <restLimitToUser>true</restLimitToUser>
+    <updatePermission>saml.manage</updatePermission>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
     <useGlobalPermissionContext>false</useGlobalPermissionContext>

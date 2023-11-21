@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-11T09:05:24.745+02:00" lastModified="2023-05-11T10:18:45.552+02:00" leaf="true" version="14">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-11T09:05:24.745+02:00" lastModified="2023-05-31T15:23:58.027+02:00" leaf="true" version="22">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -7,6 +7,8 @@
     <references>nabu.utils.Transcoder.transcode</references>
     <references>nabu.utils.String.toStream</references>
     <references>nabu.utils.Transcoder.base64Decoder</references>
+    <references>nabu.utils.Bytes.toString</references>
+    <references>nabu.utils.Stream.toBytes</references>
     <references>nabu.utils.Transcoder.deflateDecoder</references>
     <references>java.lang.String</references>
     <references>nabu.utils.Stream.toString</references>

@@ -3,7 +3,6 @@
     <method>POST</method>
     <path>/saml/login/{providerName}</path>
     <responseHeaders>Location, Set-Cookie</responseHeaders>
-    <role>$user</role>
     <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
     <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
     <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
