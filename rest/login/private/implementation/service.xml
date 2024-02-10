@@ -7,7 +7,8 @@
 			id="24d66f2ee057401583ce9dfdd7bf192f"
 			label="input/content/RelayState == null"
 			lineNumber="2"
-			message="Relay state is required" xsi:nil="true"/>
+			message="Relay state is required"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="1ee1717c23f6446c86db0d664cf7fbe8"
@@ -69,13 +70,15 @@
 			id="cc3e21690be74bfbaf557733f5a02a1c"
 			label="!login"
 			lineNumber="4"
-			message="Invalid relay state" xsi:nil="true"/>
+			message="Invalid relay state"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
 			disabled="false"
 			id="3d924a48c0aa47ac8f4015608be7e787"
 			label="login/expires != null &amp;&amp; login/expires &lt; date"
 			lineNumber="5"
-			message="Login expired" xsi:nil="true"/>
+			message="Login expired"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="be33e085c8524dcf8ca015f246288b9b"
@@ -116,7 +119,8 @@
 			id="fa05e3bac1bb48a3b112b415ac44322f"
 			label="provider/signatureCertificate == null"
 			lineNumber="7"
-			message="No signature found" xsi:nil="true"/>
+			message="No signature found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="aeea60495525471dad10c984a6e9e04f"
@@ -201,7 +205,8 @@
 			id="66c1378a0277461e95e70784bff36752"
 			label="!valid"
 			lineNumber="10"
-			message="Invalid signature" xsi:nil="true"/>
+			message="Invalid signature"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="6e9e22b4616145ff83f0d9a8e5b49fab"
@@ -290,7 +295,8 @@
 			id="135b0eab00a54c529056cbeaf7a0d1f3"
 			label="response/Assertion/Subject/NameID == null"
 			lineNumber="12"
-			message="Could not resolve nameId" xsi:nil="true"/>
+			message="Could not resolve nameId"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="bb6b003335fd4673822f0d1c49c0e1ee"
@@ -505,7 +511,8 @@
 					id="9ab39d54439e4ff29f464a030ed38bec"
 					label="!canProceed"
 					lineNumber="19"
-					message="Can not register" xsi:nil="true"/>
+					message="Can not register"
+					whitelist="false" xsi:nil="true"/>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
 					id="d1ea80850ed74a8e96f594755b145c42"
@@ -794,7 +801,8 @@
 			id="53acf7be80a64c87978a0134d3945977"
 			label="!canProceed"
 			lineNumber="22"
-			message="Can not proceed" xsi:nil="true"/>
+			message="Can not proceed"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Generate very short lived remember token"
 			disabled="false"
@@ -891,6 +899,15 @@
 					fixedValue="true">
 				<from>saml</from>
 				<to>authenticator</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="a1bd9909f0104b978c68834bbf79ac9c"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>user/realm</from>
+				<to>realm</to>
 			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
